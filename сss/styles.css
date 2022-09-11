@@ -8,6 +8,7 @@
   --secondary-background-color: #f5f4fa;
   --border-color: #ececec;
   --social-links-color: #afb1b8;
+  --transition-dur-and-funk: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* колір фону  #FFFFFF  */
 /* колір тексту основний #757575 */
@@ -16,6 +17,7 @@
 /* колір фону капелюха та підвалу 2F303A */
 /* колір тексту на темному фоні FFFFFF */
 /* другорядний колір фону F5F4FA */
+
 .link {
   text-decoration: none;
 }
@@ -29,15 +31,18 @@
 img {
   display: block;
 }
+
 button {
   cursor: pointer;
   font-family: inherit;
   border: 1px transparent;
   border-radius: 4px;
 }
+
 address {
   font-style: inherit;
 }
+
 h1,
 h2,
 h3,
@@ -46,12 +51,14 @@ ul {
   margin-top: 0;
   margin-bottom: 0;
 }
+
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   color: var(--color);
   background-color: var(--background-color);
 }
+
 .container {
   width: 1200px;
   padding-left: 15px;
@@ -59,6 +66,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
 .section-title {
   margin-bottom: 50px;
   color: var(--title-text-color);
@@ -68,23 +76,29 @@ body {
   letter-spacing: 0.03em;
   text-align: center;
 }
+
 /* капелюх сайту */
+
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+
 .page-header {
   background-color: var(--background-color);
   border: 1px solid var(--border-color);
 }
+
 .container-header {
   display: flex;
   align-items: center;
 }
+
 .menu-nav {
   display: flex;
   align-items: center;
 }
+
 .page-logo {
   color: var(--accent-color);
   font-family: 'Raleway', sans-serif;
@@ -93,13 +107,16 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
 }
+
 .studio-heder {
   color: #000000;
 }
+
 .menu-list {
   display: flex;
   margin-left: 93px;
 }
+
 .menu-list .item + .item {
   margin-left: 50px;
 }
@@ -115,14 +132,18 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition: color var(--transition-dur-and-funk);
 }
+
 .nav-link:hover,
 .nav-link:focus {
   color: var(--accent-color);
 }
+
 .link.current {
   color: var(--accent-color);
 }
+
 .nav-link.current::after {
   content: '';
   position: absolute;
@@ -151,11 +172,13 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-dur-and-funk);
 }
+
 .contact .contact-item:not(:last-child) {
   margin-right: 50px;
 }
+
 .contact-list:hover,
 .contact-list:focus {
   color: var(--accent-color);
@@ -176,6 +199,9 @@ body {
 }
 
 /* основна частина сайту */
+
+/* hero */
+
 .hero {
   max-width: 1600px;
   height: 600px;
@@ -190,6 +216,7 @@ body {
   background-size: cover;
   text-align: center;
 }
+
 .hero-title {
   width: 696px;
   margin-bottom: 30px;
@@ -203,6 +230,7 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
+
 .modal-open-btn {
   min-width: 216px;
   height: 50px;
@@ -217,12 +245,15 @@ body {
   align-items: center;
   letter-spacing: 0.06em;
 }
+
 .modal-open-btn:hover,
 .modal-open-btn:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
+
 /* наші переваги */
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -235,17 +266,21 @@ body {
   clip-path: inset(50%);
   margin: -1px;
 }
+
 .about-list {
   display: flex;
 }
+
 .about-item {
   width: 270px;
 }
+
 .wrapper {
   width: 100%;
   height: 120px;
   margin-bottom: 30px;
 }
+
 .about-item:not(:last-child) {
   margin-right: 30px;
 }
@@ -256,6 +291,7 @@ body {
   line-height: 1.7;
   letter-spacing: 0.03em;
 }
+
 .about-title {
   margin-bottom: 10px;
 
@@ -266,16 +302,41 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+
 .work {
   padding-top: 0;
 }
+
 .work-list {
   display: flex;
   width: 270px;
 }
-.work-list .item:not(:last-child) {
+
+.work-list .work-item:not(:last-child) {
   margin-right: 30px;
 }
+.work-item {
+  position: relative;
+}
+
+.work-subtitle {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  height: 70px;
+  padding: 27px;
+  background-color: rgba(47, 48, 58, 0.8);
+  color: var(--background-color);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
 .section-team {
   background-color: var(--secondary-background-color);
 }
@@ -283,15 +344,18 @@ body {
 .team-list {
   display: flex;
 }
+
 .team-item {
   background-color: var(--background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+
 .team-item:not(:last-child) {
   margin-right: 30px;
 }
+
 .team-item .team-title {
   padding-top: 30px;
   margin-bottom: 10px;
@@ -303,6 +367,7 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
 }
+
 .team-item .team-text {
   margin-bottom: 16px;
 
@@ -332,6 +397,7 @@ body {
   height: 100%;
   background-color: var(--background-color);
   border-radius: 50%;
+  transition: background-color var(--transition-dur-and-funk), fill var(--transition-dur-and-funk);
 }
 
 .social-icon {
@@ -349,6 +415,7 @@ body {
 }
 
 /* постійні клієнти */
+
 .container-clients {
   padding-top: 94px;
   padding-bottom: 120px;
@@ -358,6 +425,7 @@ body {
   display: flex;
   gap: 30px;
 }
+
 .clients-item {
   width: 170px;
   height: 92px;
@@ -371,11 +439,13 @@ body {
   height: 100%;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transition: fill 250ms var(--transition-dur-and-funk), border-color var(--transition-dur-and-funk);
 }
 
 .clients-icon {
   fill: var(--social-links-color);
 }
+
 .clients-link:hover {
   border: 1px solid var(--accent-color);
 }
@@ -386,6 +456,7 @@ body {
 }
 
 /* підвал сайту */
+
 .page-footer {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -459,6 +530,7 @@ body {
   height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  transition: background-color var(--transition-dur-and-funk);
 }
 
 .social-icon-footer {
@@ -471,7 +543,9 @@ body {
 }
 
 /* стилі портфоліо */
+
 /* кнопки фильтру */
+
 .filter-list {
   display: flex;
   justify-content: center;
@@ -482,7 +556,7 @@ body {
   margin-left: 8px;
 }
 
-.filter-list .filter-btn {
+.filter-btn {
   height: 38px;
   padding: 6px 22px;
 
@@ -493,6 +567,8 @@ body {
   line-height: 1.6;
   text-align: center;
   letter-spacing: 0.03em;
+  transition: color 250ms var(--transition-dur-and-funk),
+    background-color var(--transition-dur-and-funk), box-shadow var(--transition-dur-and-funk);
 }
 
 .filter-list .filter-btn.current {
@@ -508,6 +584,7 @@ body {
 }
 
 /* список карток */
+
 .card-list {
   display: flex;
   flex-wrap: wrap;
@@ -533,6 +610,7 @@ body {
 .card-item {
   width: 370px;
   height: 404px;
+  transition: box-shadow var(--transition-dur-and-funk);
 }
 
 .card-item:hover,
@@ -545,6 +623,34 @@ body {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.overlay-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+
+  background-color: rgba(33, 150, 243, 0.9);
+  color: var(--background-color);
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  transform: translateY(101%);
+  transition: transform var(--transition-dur-and-funk);
+  /* overflow: auto; */
+}
+
+.card-link:hover .overlay,
+.card-link:focus .overlay {
+  transform: translateY(0%);
 }
 
 .container-card {
@@ -566,4 +672,47 @@ body {
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.03em;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: opacity 1000ms ease, visibility 1000ms ease;
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.modal-window {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  background-color: var(--background-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal-close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  top: 7px;
+  right: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: transparent;
 }
