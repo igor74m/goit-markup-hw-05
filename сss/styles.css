@@ -315,6 +315,7 @@ body {
 .work-list .work-item:not(:last-child) {
   margin-right: 30px;
 }
+
 .work-item {
   position: relative;
 }
@@ -439,11 +440,12 @@ body {
   height: 100%;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  transition: fill 250ms var(--transition-dur-and-funk), border-color var(--transition-dur-and-funk);
+  transition: border-color var(--transition-dur-and-funk);
 }
 
 .clients-icon {
   fill: var(--social-links-color);
+  transition: fill var(--transition-dur-and-funk);
 }
 
 .clients-link:hover {
@@ -490,6 +492,7 @@ body {
   font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.03em;
+  transition: colir var(--transition-dur-and-funk);
 }
 
 .footer-list .menu-link:hover,
@@ -567,8 +570,8 @@ body {
   line-height: 1.6;
   text-align: center;
   letter-spacing: 0.03em;
-  transition: color 250ms var(--transition-dur-and-funk),
-    background-color var(--transition-dur-and-funk), box-shadow var(--transition-dur-and-funk);
+  transition: color var(--transition-dur-and-funk), background-color var(--transition-dur-and-funk),
+    box-shadow var(--transition-dur-and-funk);
 }
 
 .filter-list .filter-btn.current {
@@ -682,7 +685,7 @@ body {
   height: 100%;
   z-index: 100;
   background-color: rgba(0, 0, 0, 0.1);
-  transition: opacity 1000ms ease, visibility 1000ms ease;
+  transition: opacity 500ms ease, visibility 1000ms ease;
 }
 
 .backdrop.is-hidden {
